@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md shadow-glass border border-white/60;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-gradient-to-r from-indigo-600 to-violet-600 text-white
+           px-4 py-2 font-medium shadow-sm hover:from-indigo-500 hover:to-violet-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50
+           active:scale-[0.99] transition;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-white text-slate-700 ring-1 ring-slate-200
+           px-4 py-2 font-medium shadow-sm hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/50
+           active:scale-[0.99] transition;
+  }
+  .input {
+    @apply block w-full rounded-md border border-slate-200 bg-white px-3 py-2 shadow-sm placeholder:text-slate-400
+           focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500/40;
+  }
+  .label {
+    @apply text-sm font-medium text-slate-700;
+  }
+}
+
+
